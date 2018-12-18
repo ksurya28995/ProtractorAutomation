@@ -1,0 +1,30 @@
+
+Steps to run:
+	1. Install the nodejs latest version.
+	
+	2. Run the below commands in cmd
+		-> npm install -g protractor			//this downloads the protractor files to the npm folder under Appdata.
+		-> webdriver-manager update				//this downloads the webdrivers of Chrome & Firefox
+		-> webdriver-manager start				//this starts the webdriver standalone server @ "http://localhost:4444/wd/hub"
+		
+	3. Go to "Eclipse->Help->Eclispe Market" & install "AngularJS Eclispe" plugin.
+	
+	4. Import the project as a java project & do the following actions
+		-> right-click the project->Configure->Convert to Tern project and select only "jasmine" and "protractor" from the list and save it.
+	
+	5. Go to "Eclipse->Windows->Preferences->AngularJS->Protractor" & in the field of "Run/debug protractor with", paste the below line
+		"/ProtractorAutomation/resources/node_modules/protractor/built/cli.js"
+	
+	6. Go to "C:\Program Files\nodejs" and copy "node.exe" file which was the latest & replace it in the below mentioned path
+		"<your eclispe run file location>/plugins/tern.eclipse.ide.server.nodejs.XXXXXXXXXXX/node-v4.2.4-win32-x86_64/"
+		
+	7. To run the project, do the following action
+		-> right-click the project->Run as->Run configuration & double click the protractor in the left side panel list.
+		-> under main tab, paste "${workspace_loc:/ProtractorAutomation/config.js}" in the config file path field.
+		-> also, paste "${workspace_loc:/ProtractorAutomation}" in the working directory field.
+		-> under protractor tab, paste "${workspace_loc:/ProtractorAutomation/resources/node_modules/protractor/built/cli.js}" in the cli.js file path
+		-> click Run.
+		
+		
+		
+	
